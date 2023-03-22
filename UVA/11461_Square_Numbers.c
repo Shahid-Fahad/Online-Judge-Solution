@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+    int a,b,i,c=0;
+    while(1)
+    {
+        scanf("%d%d",&a,&b);
+        if(a==0&&b==0)
+            break;
+        else
+        {
+            if(a<b)
+            {
+                for(i=1;i<=b;i++)
+                {
+                    if(pow(i,2)>=a&&pow(i,2)<=b)
+                        c++;
+                }
+            }
+            else
+            {
+                for(i=1;i<=a;i++)
+                {
+                    if(pow(i,2)>=b&&pow(i,2)<=a)
+                        c++;
+                }
+            }
+        }
+        printf("%d\n",c);
+        c=0;
+    }
+}
